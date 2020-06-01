@@ -2,9 +2,12 @@
 
 int main() {
 
-int age = 11;
-
-std::cout << "Hello, I am " << age << " years old\n";
+int age;
+ 
+std::cout << "Enter your age. \n";
+std::cin >> age;
+  
+std::cout << "You are " << age << " years old\n";
 
 return 0;
 }
