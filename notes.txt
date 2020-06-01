@@ -1,4 +1,0 @@
-This is where I will write down any notes about C++ .
-
-
-1. Test out flipCoin.cpp!
