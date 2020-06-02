@@ -5,10 +5,10 @@ int main() {
 
 int age;
  
-std::cout << "Enter your age. \n";
-std::cin >> age;
+cout << "Enter your age. \n";
+cin >> age;
   
-std::cout << "You are " << age << " years old\n";
+cout << "You are " << age << " years old\n";
 
 return 0;
 }
