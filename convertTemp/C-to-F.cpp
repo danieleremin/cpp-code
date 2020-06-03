@@ -21,6 +21,6 @@ int main() {
     // Output
   cout << "The temp is " << tempf << " degrees Farenhiet.\n";
     
-    usleep(5000000)
+    usleep(5000000);
   
 }
