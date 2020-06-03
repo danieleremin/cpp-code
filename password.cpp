@@ -2,6 +2,7 @@
 //  Copyright © 2020 Daniel Eremin. All rights reserved.
 
 #include <iostream>
+#include <unistd.h>
 
 using namespace std;
 
@@ -21,9 +22,13 @@ int main () {
         
         cout << "Correct!\n";
         
+        usleep(1000000);
+        
     }
     else {
         cout << "Incorrect!\n";
+        
+        usleep(1000000);
     }
     
     
