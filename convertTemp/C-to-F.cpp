@@ -17,5 +17,7 @@ int main() {
   
     // Output
   std::cout << "The temp is " << tempf << " degrees Farenhiet.\n";
+    
+    usleep(5000000)
   
 }
