@@ -17,6 +17,6 @@ int main() {
   
   std::cout << "The temp is " << tempc << " degrees Celsius.\n";
     
-    usleep(5000000)
+    usleep(5000000);
   
 }
