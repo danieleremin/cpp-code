@@ -1,6 +1,7 @@
 // This file converts Farenhiet to Celsius
 
 #include <iostream>
+#include <unistd.h>
 
 int main() {
   

@@ -1,6 +1,9 @@
 // This file converts Celsius to Farenhiet
 
 #include <iostream>
+#include <unistd.h>
+
+using namespace std;
 
 int main() {
   
@@ -8,15 +11,15 @@ int main() {
   double tempf;
   
   // Ask the user
-  std::cout << "Enter the temperature in Celsius\n";
+  cout << "Enter the temperature in Celsius\n";
 
- std::cin >> tempc;
+ cin >> tempc;
   
   // Calculate
   tempf = (tempc / 5) * 9 + 32;
   
     // Output
-  std::cout << "The temp is " << tempf << " degrees Farenhiet.\n";
+  cout << "The temp is " << tempf << " degrees Farenhiet.\n";
     
     usleep(5000000)
   
