@@ -1,11 +1,13 @@
 #include <iostream>
 #include <unistd.h>
 
+// This will check if the text entered is the same as the text in the string pass
+
 using namespace std;
 
 int main () {
    
-    string pass = "password";
+    string pass = "c++";
     
     cout << "Enter secret text > \n" << flush;
     
