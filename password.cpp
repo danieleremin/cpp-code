@@ -1,6 +1,3 @@
-//  Created by Daniel Eremin on 6/2/20.
-//  Copyright © 2020 Daniel Eremin. All rights reserved.
-
 #include <iostream>
 #include <unistd.h>
 
