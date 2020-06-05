@@ -11,7 +11,7 @@ int main() {
   double tempf;
   
   // Ask the user
-  cout << "Enter the temperature in Celsius\n";
+  cout << "Enter the temperature in Celsius > \n";
 
  cin >> tempc;
   
