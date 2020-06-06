@@ -1,8 +1,5 @@
 #include <iostream>
 #include <unistd.h>
-
-// This will check if the text entered is the same as the text in the string pass
-
 using namespace std;
 
 int main () {
@@ -15,8 +12,9 @@ int main () {
     
     cin >> input;
     
-    // cout << "You entered '" << input << "'" << endl;
-    
+    // For debuging: cout << "You entered '" << input << "'" << endl;
+   
+   // This will check if the text entered is the same as the text in the string pass 
     if (input == pass) {
         
         cout << "Correct!\n";
