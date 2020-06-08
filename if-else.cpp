@@ -32,3 +32,4 @@ int main () {
     return 0;
 }
 
+// Warning! This is writen for Unix. On windows there will be errors.
