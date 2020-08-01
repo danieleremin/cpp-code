@@ -9,7 +9,7 @@ int count = 0;
   cout << "Loop " << count << ".\n";
   ++count;
 }
-cout << "Done!\n"
+cout << "Done!\n";
 
 return 0;
 }
