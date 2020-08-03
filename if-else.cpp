@@ -4,7 +4,7 @@ using namespace std;
 
 int main () {
    
-    string pass = "c++";
+    const string pass = "c++";
     
     cout << "Enter secret text > \n" << flush;
     
