@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 int main() {
@@ -7,14 +6,19 @@ int main() {
 // While
 int Wcount = 0;
   while(Wcount <= 4) {
-  cout << "Loop " << Wcount << ".\n";
+  cout << "While Loop " << Wcount << ".\n";
   ++Wcount;
 }
 cout << "Done with while loop!\n";
 
-// For-while
 
-// Notice: The do-while loop is in the file password.cpp
+// For Loop
+for(int i=0; i<6; i++) {
+cout << "Test\n";
+cout << "For loop " << i << endl;
+}
+
+// Notice: The do-while loop is in the file password2.cpp
 
 return 0;
 }
