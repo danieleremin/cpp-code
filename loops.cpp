@@ -15,7 +15,7 @@ cout << "Done with while loop!\n";
 // For Loop
 for(int i=0; i<6; i++) {
 cout << "Test\n";
-cout << "For loop " << i << endl;
+cout << "For loop: " << i << endl;
 }
 
 // Notice: The do-while loop is in the file password2.cpp
