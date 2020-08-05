@@ -15,8 +15,8 @@ int main() {
 		cout << "Values of array: " << ints[i] << endl;
 	}
 
-	cout << values[3] << endl;
-	cout << "Full array: " << values << ". \n";
+	cout << ints[3] << endl;
+	cout << "Full array: " << ints << ". \n";
 
 	string words[3] = {"Hi", "Bye", "Something"};
 	cout << endl << words[2] << " is the last value of the string array. \n";
