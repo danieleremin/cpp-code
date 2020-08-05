@@ -15,7 +15,6 @@ int main() {
 		cout << "Values of array: " << ints[i] << endl;
 	}
 
-	cout << ints[3] << endl;
 	cout << "Full array: " << ints << ". \n";
 
 	string words[3] = {"Hi", "Bye", "Something"};
