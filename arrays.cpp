@@ -4,12 +4,16 @@ using namespace std;
 
 int main() {
 
-	int values[4];
+	int ints[4];
 
-	values[0] = 41;
-	values[1] = 25;
-	values[2] = 34;
-	values[3] = 555;
+	ints[0] = 41;
+	ints[1] = 25;
+	ints[2] = 34;
+	ints[3] = 555;
+	
+	for(int i=0; i<4; i++) {
+		cout << "Values of array: " << ints[i] << endl;
+	}
 
 	cout << values[3] << endl;
 	cout << "Full array: " << values << ". \n";
