@@ -18,7 +18,7 @@ cout << "Test\n";
 cout << "For loop: " << i << endl;
 }
 
-// Notice: The do-while loop is in the file password2.cpp
+// NOTICE: The do-while loop is in the file password2.cpp
 
 return 0;
 }
