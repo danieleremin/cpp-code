@@ -11,8 +11,10 @@ int main() {
 	ints[2] = 34;
 	ints[3] = 555;
 	
+	int valueCOUNT = 0;
 	for(int i=0; i<4; i++) {
-		cout << "Values of array: " << ints[i] << endl;
+		cout << "Value " << valueCOUNT << " of array: " << ints[i] << endl;
+		valueCOUNT++;
 	}
 
 	cout << "Full array: " << ints << ". \n";
