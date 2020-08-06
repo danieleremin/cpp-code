@@ -12,7 +12,7 @@ int numbers[11] = {};
   }
   
   for(int i=0; i<11; i++) {
-   cout << "The powers of ten from 2 to 2048 are: " << numbers[i] << endl; 
+   cout << "2 to the power of "<< i+1 << " is: " << numbers[i] << endl; 
   }
 
 return 0;
