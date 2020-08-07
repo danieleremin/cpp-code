@@ -2,7 +2,8 @@
 using namespace std;
 
 int main() {
-  
+
+  // calculate values
 int numbers[15] = {};
   int value = 2;
   for(int i=0; i<15; i++) {
