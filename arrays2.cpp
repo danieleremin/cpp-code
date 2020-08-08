@@ -11,7 +11,7 @@ int main() {
 	cout << "List of animals: \n";
 	for(int i=0; i<2; i++) {
 		for(int a=0; a<3; a++) {
-			cout << animals[i][a] << ", " << flush;
+			cout << animals[i][a] << " | " << flush;
 		}
 		cout << endl;
 	}
