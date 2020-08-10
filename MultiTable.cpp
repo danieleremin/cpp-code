@@ -3,7 +3,22 @@ using namespace std;
 
 int main() {
 
-	// Put code here.
+	int numbers[10][10];
+	
+	// Initialize values
+	for(int i=1; i<=10; i++) {
+		for(int a=1; a<=10; a++) {
+			numbers[][] =
+		}
+	}
+
+	// Output Values
+
+	for(int i=0; i<=10; i++) {
+		for(int a=0; i<=10; i++) {
+			cout << numbers[i][a] << " _|_ ";
+		}
+	}
 
  return 0;
 }
