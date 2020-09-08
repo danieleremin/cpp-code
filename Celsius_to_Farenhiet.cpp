@@ -9,7 +9,7 @@ int main() {
   double tempf;
   
   // Ask the user
-  cout << "Enter the temperature in Celsius > " << flush;
+  cout << "Enter the temperature in Celsius \n > ";
 
  cin >> tempc;
   
