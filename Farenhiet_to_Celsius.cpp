@@ -7,7 +7,7 @@ int main() {
   double tempf;
   double tempc;
   
-  std::cout << "Enter the temperature in Farenhiet > ";
+  std::cout << "Enter the temperature in Farenhiet \n > ";
 
  std::cin >> tempf;
   
