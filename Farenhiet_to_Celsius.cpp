@@ -1,13 +1,13 @@
 #include <iostream>
 #include <unistd.h>
 
-// This converts Farenhiet to Celsius
+// This converts Fahrenheit to Celsius then outputs the result.
 int main() {
   
   double tempf;
   double tempc;
   
-  std::cout << "Enter the temperature in Farenhiet \n > ";
+  std::cout << "Enter the temperature in Farenhiet " << endl << "> ";
 
  std::cin >> tempf;
   
