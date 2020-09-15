@@ -17,7 +17,7 @@ int main() {
 
 	for(int i=0; i<=10; i++) {
 		for(int a=0; i<=10; i++) {
-			cout << numbers[i][a] << " _|_ \n";
+			cout << numbers[i][a] << " \n ";
 		}
 	}
 	cout << endl;
