@@ -17,7 +17,16 @@ int main() {
 
 	for(int i=0; i<=10; i++) {
 		for(int a=0; i<=10; i++) {
-			cout << numbers[i][a] << " \n ";
+			cout << numbers[i][1] << " \n ";
+			cout << numbers[i][2] << " \n ";
+			cout << numbers[i][3] << " \n ";
+			cout << numbers[i][4] << " \n ";
+			cout << numbers[i][5] << " \n ";
+			cout << numbers[i][6] << " \n ";
+			cout << numbers[i][7] << " \n ";
+			cout << numbers[i][8] << " \n ";
+			cout << numbers[i][9] << " \n ";
+			cout << numbers[i][10] << " \n ";
 		}
 	}
 	cout << endl;
