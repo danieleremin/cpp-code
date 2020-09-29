@@ -27,8 +27,8 @@ int main() {
 			cout << numbers[i][7] << " | ";
 			cout << numbers[i][8] << " | ";
 			cout << numbers[i][9] << " | ";
-			cout << endl;
 		}
+		cout << endl
 	}
 	cout << endl;
 
