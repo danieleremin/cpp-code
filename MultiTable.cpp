@@ -18,6 +18,7 @@ int main() {
 	for(int i=0; i<=10; i++) {
 		for(int a=0; i<=10; i++) {
 			cout << numbers[i][a] << " ";
+			cout << endl;
 		}
 		cout << endl;
 	}
