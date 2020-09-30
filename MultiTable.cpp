@@ -17,7 +17,17 @@ int main() {
 
 	for(int i=0; i<=10; i++) {
 		for(int a=0; i<=10; i++) {
-			cout << numbers[i][a] << " ";
+			cout << numbers[i][0] << " ";
+			cout << numbers[i][1] << " ";
+			cout << numbers[i][2] << " ";
+			cout << numbers[i][3] << " ";
+			cout << numbers[i][4] << " ";
+			cout << numbers[i][5] << " ";
+			cout << numbers[i][6] << " ";
+			cout << numbers[i][7] << " ";
+			cout << numbers[i][8] << " ";
+			cout << numbers[i][9] << " ";
+			
 			cout << endl;
 		}
 		cout << endl;
