@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
 
-string animals[2][3] = {
+string animals[][3] = {
 		 {"fox", "cat", "dog"},
 		 {"mouse", "squirrel", "rabbit"},
 	};
