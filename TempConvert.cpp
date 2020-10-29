@@ -3,7 +3,6 @@
 using namespace std;
 
 void CtoF() {
-	// This converts Celsius to Fahrenheit and then outputs the result
 	double tempc;
 	double tempf;
   
@@ -22,6 +21,19 @@ void CtoF() {
 }
 
 void FtoC() {
+	double tempf;
+	double tempc;
+  
+	cout << "Enter the temperature in Farenhiet " << endl << "> ";
+
+	cin >> tempf;
+  
+  
+	tempc = (tempf - 32) / 1.8;
+
+	cout << "The temperature is " << tempc << " degrees Celsius.\n";
+    
+	usleep(5000000);
 
 }
 
