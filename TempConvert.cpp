@@ -37,13 +37,7 @@ void FtoC() {
 
 }
 
-int main() {
-
-bool complete = false;
-string input;
-
-do {
-
+void Ask() {
 	cout << " Press F to convert Fahrenheit to Celsius \n Press C to convert Celsius to Fahrenheit \n or Press Q to quit. \n";
 	cin >> input;
 
@@ -62,6 +56,16 @@ do {
 	else {
 		cout << "Invalid input, select something from the menu. \n" << endl;
 	}
+}
+
+int main() {
+
+bool complete = false;
+string input;
+
+do {
+
+	Ask();
 
 } while(complete == false);
 
