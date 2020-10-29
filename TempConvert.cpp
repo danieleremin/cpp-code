@@ -40,32 +40,28 @@ void FtoC() {
 int main() {
 
 bool complete = false;
+string input;
 
 do {
 
-	int input;
-
-	cout << " Press 1 to convert Fahrenheit to Celsius \n Press 2 to convert Celsius to Fahrenheit \n or Press 0 to quit. \n";
+	cout << " Press F to convert Fahrenheit to Celsius \n Press C to convert Celsius to Fahrenheit \n or Press Q to quit. \n";
 	cin >> input;
 
-	switch(input) {
-		case 1:
-			FtoC();
-			complete = true;
-			break;
-		case 2:
-			CtoF();
-			complete = true;
-			break;
-		case 0:
-			cout << "Goodbye. \n";
-			exit(0);
-			break;
-		default:
-			cout << "Invalid entry, Please enter something from the list. \n";
-			cout << " Press F to convert Fahrenheit to Celsius \n Press C to convert Celsius to Fahrenheit \n or Press Q to quit. \n";
+	if(input == "F" || input == "f") {
+		FtoC();
+		complete = true;
 	}
-
+	else if(input == "C" || input == "c") {
+		CtoF();
+		complete = true;
+	}
+	else if(input == "Q" || input == "q") {
+		cout << "Goodbye \n";
+		exit(0);
+	}
+	else {
+		cout << "Invalid input, select something from the menu. \n" << endl;
+	}
 
 } while(complete == false);
 
