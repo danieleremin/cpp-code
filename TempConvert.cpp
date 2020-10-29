@@ -40,7 +40,7 @@ void FtoC() {
 int main() {
 
 bool complete = false;
-string input;
+char input;
 
 do {
 
