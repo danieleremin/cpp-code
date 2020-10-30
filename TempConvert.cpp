@@ -1,5 +1,4 @@
 #include <iostream>
-#include <unistd.h>
 using namespace std;
 
 void CtoF() {
@@ -16,8 +15,6 @@ void CtoF() {
   
 	// Output
 	cout << "The temperature is " << tempf << " degrees Farenhiet. \n";
-
-	usleep(5000000);
 }
 
 void FtoC() {
@@ -32,9 +29,6 @@ void FtoC() {
 	tempc = (tempf - 32) / 1.8;
 
 	cout << "The temperature is " << tempc << " degrees Celsius.\n";
-    
-	usleep(5000000);
-
 }
 
 int main() {
