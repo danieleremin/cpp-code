@@ -38,7 +38,7 @@ string input;
 
 do {
 
-		cout << " Press F to convert Fahrenheit to Celsius \n Press C to convert Celsius to Fahrenheit \n or Press Q to quit. \n";
+	cout << " Press F to convert Fahrenheit to Celsius \n Press C to convert Celsius to Fahrenheit \n or Press Q to quit. \n";
 	cin >> input;
 
 	if(input == "F" || input == "f") {
