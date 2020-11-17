@@ -31,7 +31,7 @@ void FtoC() {
 	cout << "The temperature is " << tempc << " degrees Celsius.\n";
 }
 
-string getInput() {
+void getAndProccessInput() {
 	string input;
 	bool complete = false;
 
@@ -61,13 +61,12 @@ string getInput() {
 
 	} while(complete == false);
 
-	return input;
 }
 
 int main() {
 
-getInput();
-// getInput() function get selecton and then does the appropriate thing acording to the selection
+getAndProccessInput();
+// the getInput() function get selection and then either starts the temperature converting functions or exits the program
 
 return 0;
 }
