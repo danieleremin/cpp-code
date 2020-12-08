@@ -1,3 +1,4 @@
-# ignore logs and system files
 *.log
 .DS_Store
+thumbs.db
+desktop.ini
