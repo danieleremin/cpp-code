@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include <cmath>
 using namespace std;
 
@@ -16,23 +15,23 @@ void work() {
   cout << "If you want to quit press Q \n";
   cin >> input;
   double result;
-  if(input == "A") {
+  if(input == "A" || input == "a") {
     result = fNum + sNum;
     cout << "The result is: " << result << endl;
   }
-  else if(input == "S") {
+  else if(input == "S" || input == "s") {
     double result = fNum - sNum;
     cout << "The result is: " << result << endl;
   }
-  else if(input == "M") {
+  else if(input == "M" || input == "m") {
     double result = fNum * sNum;
     cout << "The result is: " << result << endl;
   }
-  else if(input == "D") {
+  else if(input == "D" || input == "d") {
     double result = fNum / sNum;
     cout << "The result is: " << result << endl;
   }
-  else if(input == "Q") {exit(0);}
+  else if(input == "Q" || input == "q") {exit(0);}
   else {
     cout << "\n Invalid input please select a valid option \n" << endl;
     work();
