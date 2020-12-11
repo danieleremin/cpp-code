@@ -49,6 +49,7 @@ void work() {
     cout << "Input value \n > ";
     float value;
     cin >> value;
+    value = value, result;
     double result = sqrt(value);
     cout << "The result is: " << result << endl;
   }
