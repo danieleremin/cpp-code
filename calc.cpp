@@ -1,10 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-double squareRT(float value) {
-  sqrt(value);
-  return value;
-}
+
 void work() {
   string input;
   cout << "Options: \n 1. Add=A \n 2. Subtract=S \n 3. Multiply=M \n 4. Divide=D \n Square Root=SQ \n";
