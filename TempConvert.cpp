@@ -1,35 +1,8 @@
 #include <iostream>
 using namespace std;
 
-void CtoF() {
-	double tempc;
-	double tempf;
-
-	// Ask the user
-	cout << "Enter the temperature in Celsius " << endl << "> ";
-
-	cin >> tempc;
-
-	// Calculate
-	tempf = (tempc / 5) * 9 + 32;
-
-	// Output
-	cout << "The temperature is " << tempf << " degrees Farenhiet. \n";
-}
-
-void FtoC() {
-	double tempf;
-	double tempc;
-
-	cout << "Enter the temperature in Farenhiet " << endl << "> ";
-
-	cin >> tempf;
-
-
-	tempc = (tempf - 32) / 1.8;
-
-	cout << "The temperature is " << tempc << " degrees Celsius.\n";
-}
+void CtoF();
+void FtoC();
 
 void getChoice() {
 	string input;
@@ -69,4 +42,32 @@ getChoice();
 // the getChoice() function get selection and then either starts the temperature converting functions or exits the program
 
 return 0;
+}
+void CtoF() {
+	double tempc;
+	double tempf;
+
+	// Ask the user
+	cout << "Enter the temperature in Celsius " << endl << "> ";
+
+	cin >> tempc;
+
+	// Calculate
+	tempf = (tempc / 5) * 9 + 32;
+
+	// Output
+	cout << "The temperature is " << tempf << " degrees Farenhiet. \n";
+}
+void FtoC() {
+	double tempf;
+	double tempc;
+
+	cout << "Enter the temperature in Farenhiet " << endl << "> ";
+
+	cin >> tempf;
+
+
+	tempc = (tempf - 32) / 1.8;
+
+	cout << "The temperature is " << tempc << " degrees Celsius.\n";
 }
