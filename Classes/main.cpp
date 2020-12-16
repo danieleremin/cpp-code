@@ -1,5 +1,7 @@
 #include <iostream>
-#include "Person.h"
+extern "C" {
+  #include "Person.h"
+}
 using namespace std;
 
 int main() {

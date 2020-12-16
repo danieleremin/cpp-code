@@ -1,7 +1,9 @@
 #include <iostream>
-#include "Person.h"
+extern "C" {
+  #include "Person.h"
+}
 using namespace std;
 
 void speak() {
-  cout << "Meow! \n";
+  cout << "Hello! \n";
 }
