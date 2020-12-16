@@ -19,8 +19,8 @@ int main() {
 		valueCOUNT++;
 	}
 
-	cout << "Array hex value: " << ints << ". \n";
-	// I think it's a hex value. In other programing laugages ot would output differently.
+	cout << "Wierd array output: " << ints << ". \n";
+	// I think it's a hex value. In other programing laugages it would output differently.
 
 	cout << endl << "ARRAY OF STRINGS \n";
 
