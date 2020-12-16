@@ -17,6 +17,8 @@ static int walkInput() {
       return 0;
       break;
     default:
+      std::cin.clear();
+      std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
       std::cout << "Invalid input. Try again \n";
       walkInput();
   }
