@@ -7,7 +7,7 @@ class Person {
 public:
   void speak();
   void walk();
-  void walkInput();
-  string name;
+  int walkInput();
+  std::string name;
 };
 #endif

@@ -27,4 +27,5 @@ int Person::walkInput() {
       std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
       std::cout << "Invalid input. Try again \n";
       walkInput();
+    }
 }
