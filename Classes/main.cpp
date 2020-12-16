@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-  speak();
-  walkInput();
+  Person.speak();
+  Person.walkInput();
   return 0;
 }
