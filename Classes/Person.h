@@ -8,7 +8,6 @@ public:
   void speak();
   void walk();
   void walkInput();
-  }
-  // string name = "";
+  string name;
 };
 #endif
