@@ -14,5 +14,6 @@ int main() {
     person2.speak();
     cout << "Info: \n" << person2.data();
   }
+  cout << "Program exiting… \n";
   return 0;
 }
