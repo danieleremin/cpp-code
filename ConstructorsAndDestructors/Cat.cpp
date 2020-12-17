@@ -6,6 +6,9 @@ Cat::Cat() {
   cout << "New cat created. \n";
   happy = true;
 }
+Cat::~Cat() {
+  cout << "Cat " << name << " destroyed. \n";
+}
 void Cat::speak() {
   if(happy) {
     cout << "Meouw!!! \n";

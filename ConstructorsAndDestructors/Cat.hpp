@@ -6,8 +6,10 @@ private:
   bool happy;
 public:
   Cat();
+  ~Cat();
   void speak();
   void makeSad();
+  std::string name;
 };
 
 #endif
