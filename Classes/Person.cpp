@@ -29,3 +29,17 @@ int Person::walkInput() {
       walkInput();
     }
 }
+Person::Person() {
+  cout << "\n Person created. \n What do you want this person's name to be? \n> ";
+  string inputA;
+  cin >> inputA;
+  name = inputA;
+  int inputB;
+  cout << "What age? \n";
+  cin >> inputB;
+  age = inputB;
+}
+string Person::data() {
+  string alldata = "Age: " + to_string(age) + "\nName: " + name;
+  return alldata + "\n";
+}

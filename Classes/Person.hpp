@@ -4,10 +4,14 @@
 #include <iostream>
 
 class Person {
+private:
+  std::string name;
+  int age;
 public:
+  Person();
   void speak();
   void walk();
   int walkInput();
-  std::string name;
+  std::string data();
 };
 #endif

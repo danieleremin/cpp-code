@@ -3,10 +3,16 @@
 using namespace std;
 
 int main() {
-  Person person1;
-  person1.name = "Daniel";
-  cout << "Name: " << person1.name << " \n";
-  person1.speak();
-  person1.walkInput();
+  {
+    Person person1;
+    person1.speak();
+    person1.walkInput();
+    cout << "Info: \n" << person1.data();
+  }
+  {
+    Person person2;
+    person2.speak();
+    cout << "Info: \n" << person2.data();
+  }
   return 0;
 }
