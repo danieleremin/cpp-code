@@ -30,14 +30,24 @@ int Person::walkInput() {
     }
 }
 Person::Person() {
-  cout << "\n Person created. \n What do you want this person's name to be? \n> ";
-  string inputA;
-  cin >> inputA;
-  name = inputA;
-  int inputB;
+  name = "Daniel";
+  cout << "\n Person created. \n";
+  int theAge;
   cout << "What age? \n";
+  cin >> theAge;
+  age = theAge;
+  cout << "Do you want a different name? Press Y if yes or any other key if no. \n";
+  string inputB;
   cin >> inputB;
-  age = inputB;
+  if(inputB == "y" || inputB == "Y") {
+    string newName;
+    cout << "What name? \n";
+    cin >> newName;
+    setName(newName);
+  }
+}
+void Person::setName(std::string newName) {
+  name = newName;
 }
 string Person::data() {
   string alldata = "Age: " + to_string(age) + "\nName: " + name;

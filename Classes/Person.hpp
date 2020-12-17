@@ -9,6 +9,7 @@ private:
   int age;
 public:
   Person();
+  void setName(std::string newName);
   void speak();
   void walk();
   int walkInput();
