@@ -53,3 +53,6 @@ string Person::data() {
   string alldata = "Age: " + to_string(age) + "\nName: " + name;
   return alldata + "\n";
 }
+Person::~Person() {
+  cout << "Person object " << name << " destroyed \n";
+}
