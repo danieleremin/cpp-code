@@ -46,8 +46,8 @@ Person::Person() {
     setName(newName);
   }
 }
-void Person::setName(std::string newName) {
-  name = newName;
+void Person::setName(std::string name) {
+  this->name = name;
 }
 string Person::data() {
   string alldata = "Age: " + to_string(age) + "\nName: " + name;
