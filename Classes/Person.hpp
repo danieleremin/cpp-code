@@ -2,18 +2,20 @@
 #define PERSON_H
 
 #include <iostream>
+using namespace std;
 
 class Person {
 private:
-  std::string name;
+  string name;
   int age;
 public:
   Person();
+  Person(string name, int age): name(name), age(age) {};
   ~Person();
-  void setName(std::string newName);
+  void setName(string newName);
   void speak();
   void walk();
   int walkInput();
-  std::string data();
+  string data();
 };
 #endif

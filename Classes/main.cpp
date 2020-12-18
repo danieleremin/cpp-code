@@ -10,7 +10,7 @@ int main() {
     cout << "Info: \n" << person1.data();
   }
   {
-    Person person2;
+    Person person2("Bob", 42);
     person2.speak();
     cout << "Info: \n" << person2.data();
   }
