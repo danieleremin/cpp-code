@@ -39,7 +39,7 @@ void work() {
     cin >> fNum;
     cout << "Enter second number \n > ";
     cin >> sNum;
-    double result = fNum / sNum;
+    double result = (double)fNum / sNum;
     cout << "The result is: " << result << endl;
   }
   else if(input == "SQ" || input == "sq") {
