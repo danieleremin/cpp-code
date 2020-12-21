@@ -19,8 +19,7 @@ int main() {
 		valueCOUNT++;
 	}
 
-	cout << "Wierd array output: " << ints << ". \n";
-	// I think it's a hex value. In other programing laugages it would output differently.
+	cout << "First element of int array: " << *ints << ". \n";
 
 	cout << endl << "ARRAY OF STRINGS \n";
 
