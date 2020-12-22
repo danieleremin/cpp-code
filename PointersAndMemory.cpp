@@ -7,8 +7,8 @@ void manipulate(int* value) {
   *value = 10;
   cout << "3. value in manipulate: " << *value << endl;
 }
-void change2(&double value) {
-  cout << "Before change" << value << endl;
+void change2(double &value) {
+  cout << "Before change: " << value << endl;
   value = 43.21;
   // Second cout in main function
 }
@@ -30,6 +30,6 @@ int main() {
   double value3 = 12.34;
   cout << "You can also change using the & symbol \n";
   change2(value3);
-  cout << "After change: " << value << endl;
+  cout << "After change: " << value3 << endl;
   return 0;
 }
