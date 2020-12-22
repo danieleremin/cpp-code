@@ -28,7 +28,7 @@ int main() {
   cout << "4. value2: " << value2 << endl;
   
   double value3 = 12.34;
-  cout << "You can also change using the & symbol \n";
+  cout << "You can also change values using reference variables (& before the name) \n";
   change2(value3);
   cout << "After change: " << value3 << endl;
   return 0;
