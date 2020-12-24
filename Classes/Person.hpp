@@ -12,6 +12,11 @@ public:
   Person();
   Person(string name, int age): name(name), age(age) {};
   ~Person();
+    Person(const Person& other) {
+        cout << "Person created by copying. \n";
+        name = other.name;
+        age = other.age;
+    }
   void setName(string newName);
   void speak();
   void walk();

@@ -13,6 +13,9 @@ int main() {
     Person person2("Bob", 42);
     person2.speak();
     cout << "Info: \n" << person2.data();
+
+    Person person3 = person2;
+    cout << "Info: \n" << person3.data();
   }
   cout << "Program exiting… \n";
   return 0;

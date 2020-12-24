@@ -28,6 +28,7 @@ int Person::walkInput() {
       std::cout << "Invalid input. Try again \n";
       walkInput();
     }
+    return 1;
 }
 Person::Person() {
   name = "Daniel";
