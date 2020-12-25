@@ -2,7 +2,7 @@
 #include <sstream>
 using namespace std;
 
-Class Animal {
+class Animal {
 public:
   Animal() {cout << "Animal Created \n";}
   ~Animal() {cout << "Animal Destroyed \n";}
