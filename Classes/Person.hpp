@@ -16,9 +16,9 @@ public:
     cout << "Person created by copying. \n";
   }
   void setName(string newName);
-  void speak();
-  void walk();
-  int walkInput();
+  void speak() const;
+  void walk() const;
+  int walkInput() const;
   string data();
 };
 #endif
