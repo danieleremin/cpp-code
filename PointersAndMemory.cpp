@@ -2,6 +2,12 @@
 #include <sstream>
 using namespace std;
 
+Class Animal {
+public:
+  Animal() {cout << "Animal Created \n";}
+  ~Animal() {cout << "Animal Destroyed \n";}
+};
+
 void manipulate(int* value) {
   cout << "2. value in manipulate: " << *value << endl;
   *value = 10;
@@ -31,5 +37,9 @@ int main() {
   cout << "You can also change values using reference variables (& before the name) \n";
   change2(value3);
   cout << "After change: " << value3 << endl;
+  
+  Animal* pAnimal = new Animal[10];
+  delete [] pAnimal;
+  
   return 0;
 }
