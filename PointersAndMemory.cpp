@@ -3,9 +3,13 @@
 using namespace std;
 
 class Animal {
+private:
+  string name;
 public:
   Animal() {cout << "Animal Created \n";}
   ~Animal() {cout << "Animal Destroyed \n";}
+  void setName(string name) {this->name = name;}
+  void speak() const {cout << "My name is: " << name << endl;}
 };
 
 void manipulate(int* value) {
@@ -39,6 +43,10 @@ int main() {
   cout << "After change: " << value3 << endl;
   
   Animal* pAnimal = new Animal[10];
+  
+  pAnimal[5].setName("George");
+  pAnimal[5].speak();
+  
   delete [] pAnimal;
   
   return 0;
