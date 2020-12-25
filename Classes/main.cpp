@@ -2,6 +2,11 @@
 #include "Person.hpp"
 using namespace std;
 
+Person* createPerson() {
+  Person *pPerson = new Person();
+  return pPerson;
+}
+
 int main() {
   {
     Person person1;
@@ -18,10 +23,10 @@ int main() {
     person3.setName("Jason");
     cout << "Info: \n" << person3.data();
   }
-  Person* pPerson1 = new Person();
-  (*pPerson1).speak();
-  pPerson1->walkInput();
-  delete pPerson1;
+  Person* person4 = createPerson();
+  (*person4).speak();
+  person4->walkInput();
+  delete person4;
     
   cout << "Program exiting… \n";
   return 0;
