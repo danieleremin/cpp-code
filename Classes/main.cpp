@@ -15,8 +15,14 @@ int main() {
     cout << "Info: \n" << person2.data();
 
     Person person3 = person2;
+    person3.setName("Jason");
     cout << "Info: \n" << person3.data();
   }
+  Person* pPerson1 = new Person();
+  (*pPerson1).speak();
+  pPerson1->walkInput();
+  delete pPerson1;
+    
   cout << "Program exiting… \n";
   return 0;
 }
