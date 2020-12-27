@@ -3,6 +3,7 @@
 //  Created by Daniel Eremin on 12/26/20.
 #include <iostream>
 #include "SDL.h"
+#include "SDL_main.h"
 using namespace std;
 
 int main() {
@@ -10,7 +11,9 @@ int main() {
         cout << "SDL init failed \n";
         return 1;
     }
-    cout << "SDL Init succeeded \n";
-    SDL_Quit();
-    return 0;
+    else {
+        cout << "SDL Init succeeded \n";
+        SDL_Quit();
+        return 0;
+    }
 }

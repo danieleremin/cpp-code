@@ -10,6 +10,8 @@
 		652B323525981280006B5938 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65EF06B22597CED000528608 /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		652B323A259814E2006B5938 /* libSDL2.a in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 652B3239259814E2006B5938 /* libSDL2.a */; };
 		652B323B25981661006B5938 /* SDL2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 652B3237259814C1006B5938 /* SDL2 */; };
+		652B3295259825B0006B5938 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652B328D25981A41006B5938 /* SDL2.framework */; };
+		652B3297259825B4006B5938 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 652B323D259819EE006B5938 /* libSDL2.a */; };
 		65EF069F2597C3EC00528608 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65EF069E2597C3EC00528608 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +131,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				652B3297259825B4006B5938 /* libSDL2.a in Frameworks */,
+				652B3295259825B0006B5938 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,11 +445,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/usr/local/Frameworks,
+					"/usr/local/Frameworks/**",
+					"$(PROJECT_DIR)/FireExplosion",
 				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/sdl2/2.0.14/lib,
+					"$(PROJECT_DIR)/FireExplosion",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -461,10 +468,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					/usr/local/Frameworks,
+					"$(PROJECT_DIR)/FireExplosion",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/sdl2/2.0.14/lib,
+					"$(PROJECT_DIR)/FireExplosion",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -480,7 +489,7 @@
 				65EF06A12597C3EC00528608 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		65EF06A22597C3EC00528608 /* Build configuration list for PBXNativeTarget "FireExplosion" */ = {
 			isa = XCConfigurationList;
@@ -489,7 +498,7 @@
 				65EF06A42597C3EC00528608 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
