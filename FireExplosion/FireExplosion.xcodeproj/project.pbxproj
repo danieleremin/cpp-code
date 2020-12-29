@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		652B323525981280006B5938 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65EF06B22597CED000528608 /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		652B323A259814E2006B5938 /* libSDL2.a in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 652B3239259814E2006B5938 /* libSDL2.a */; };
 		652B323B25981661006B5938 /* SDL2 in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 652B3237259814C1006B5938 /* SDL2 */; };
 		652B3295259825B0006B5938 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652B328D25981A41006B5938 /* SDL2.framework */; };
 		652B3297259825B4006B5938 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 652B323D259819EE006B5938 /* libSDL2.a */; };
+		652B3299259835F1006B5938 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 652B328D25981A41006B5938 /* SDL2.framework */; };
+		652B329B25983604006B5938 /* SDL2 in Frameworks */ = {isa = PBXBuildFile; fileRef = 652B329A25983604006B5938 /* SDL2 */; };
 		65EF069F2597C3EC00528608 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65EF069E2597C3EC00528608 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -22,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				652B323525981280006B5938 /* SDL2.framework in Embed Frameworks */,
+				652B3299259835F1006B5938 /* SDL2.framework in Embed Frameworks */,
 				652B323B25981661006B5938 /* SDL2 in Embed Frameworks */,
 				652B323A259814E2006B5938 /* libSDL2.a in Embed Frameworks */,
 			);
@@ -121,6 +122,7 @@
 		652B3289259819F2006B5938 /* SDL_test_compare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDL_test_compare.h; sourceTree = "<group>"; };
 		652B328A259819F2006B5938 /* SDL_opengles2_gl2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDL_opengles2_gl2.h; sourceTree = "<group>"; };
 		652B328D25981A41006B5938 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2.framework; sourceTree = "<group>"; };
+		652B329A25983604006B5938 /* SDL2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SDL2; path = FireExplosion/SDL2; sourceTree = "<group>"; };
 		65EF069B2597C3EC00528608 /* FireExplosion */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FireExplosion; sourceTree = BUILT_PRODUCTS_DIR; };
 		65EF069E2597C3EC00528608 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		65EF06B22597CED000528608 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../usr/local/Frameworks/SDL2.framework; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				652B329B25983604006B5938 /* SDL2 in Frameworks */,
 				652B3297259825B4006B5938 /* libSDL2.a in Frameworks */,
 				652B3295259825B0006B5938 /* SDL2.framework in Frameworks */,
 			);
@@ -253,6 +256,7 @@
 		65EF06A72597CBDF00528608 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				652B329A25983604006B5938 /* SDL2 */,
 				652B3239259814E2006B5938 /* libSDL2.a */,
 				652B3237259814C1006B5938 /* SDL2 */,
 				65EF06B22597CED000528608 /* SDL2.framework */,
@@ -376,10 +380,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = (
+					/Library/Frameworks,
+					/usr/local/lib,
+					/usr/local/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[sdk=macosx*]" = (
+					"-L/usr/local/lib",
+					"-libSDL2",
+					"-lm",
+				);
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -429,9 +443,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = (
+					/usr/local/lib,
+					/usr/local/include,
+					/Library/Frameworks,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				"OTHER_LDFLAGS[sdk=macosx*]" = (
+					"-L/usr/local/lib",
+					"-libSDL2",
+					"-lm",
+				);
 				SDKROOT = macosx;
 			};
 			name = Release;
