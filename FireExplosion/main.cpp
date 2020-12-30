@@ -3,7 +3,6 @@
 //  Created by Daniel Eremin on 12/26/20.
 #include <iostream>
 #include "SDL.h"
-#include "SDL_main.h"
 using namespace std;
 
 int main() {
