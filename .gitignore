@@ -1,4 +1,9 @@
 *.log
+*.pdb
 .DS_Store
 thumbs.db
 desktop.ini
+*.tlog
+*.ipch
+*.idb
+.vs
