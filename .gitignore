@@ -10,3 +10,5 @@ desktop.ini
 *.suo
 *.ipdb
 FireExplosion.exe
+*.obj
+*.ilk
