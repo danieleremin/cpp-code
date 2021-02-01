@@ -1,7 +1,7 @@
 #include <iostream>
 #include "SDL.h"
 using namespace std;
-int main()
+int main(int argc, char* argv[])
 {
     if (SDL_Init(SDL_INIT_VIDEO)) {
         cout << "SDL init failed \n";
@@ -14,5 +14,4 @@ int main()
     }
    cout << endl << "Press any key to quit. \n";
    cin.get();
-   return 0;
 }
