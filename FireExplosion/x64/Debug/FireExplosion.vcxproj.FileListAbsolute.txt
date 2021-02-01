@@ -1,0 +1,2 @@
+C:\Users\Daniel\Desktop\Code\cpp-code\FireExplosion\x64\Debug\FireExplosion.exe
+C:\Users\Daniel\Desktop\Code\cpp-code\FireExplosion\x64\Debug\FireExplosion.pdb

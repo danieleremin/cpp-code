@@ -100,6 +100,10 @@
       <AdditionalDependencies>C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.lib;C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2main.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.18362.0\um\x64\shell32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\Daniel\Downloads\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /y /d "C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.dll" "$(OutDir)"</Command>
+      <Message>Copy DLL</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -122,6 +126,10 @@
       <AdditionalDependencies>C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.lib;C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2main.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.18362.0\um\x64\shell32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\Daniel\Downloads\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /y /d "C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.dll" "$(OutDir)"</Command>
+      <Message>Copy DLL</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -142,6 +150,10 @@
       <AdditionalDependencies>C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.lib;C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2main.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.18362.0\um\x64\shell32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\Daniel\Downloads\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /y /d "C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.dll" "$(OutDir)"</Command>
+      <Message>Copy DLL</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -164,6 +176,10 @@
       <AdditionalDependencies>C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.lib;C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2main.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.18362.0\um\x64\shell32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\Daniel\Downloads\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /y /d "C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.dll" "$(OutDir)"</Command>
+      <Message>Copy DLL</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="FireExplosion.cpp" />
