@@ -8,3 +8,4 @@ desktop.ini
 *.idb
 .vs
 .suo
+*.ipdb
