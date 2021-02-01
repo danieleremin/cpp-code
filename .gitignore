@@ -7,5 +7,5 @@ desktop.ini
 *.ipch
 *.idb
 .vs
-.suo
+*.suo
 *.ipdb
