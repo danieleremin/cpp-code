@@ -42,7 +42,5 @@ int main(int argc, char* argv[]) {
 
     SDL_DestroyWindow(window);
     SDL_Quit();
-    cout << endl << "Press enter/return to quit. \n";
-    cin.get();
     return 0;
 }
