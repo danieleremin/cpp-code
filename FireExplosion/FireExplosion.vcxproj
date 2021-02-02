@@ -101,7 +101,7 @@
       <AdditionalLibraryDirectories>C:\Users\Daniel\Downloads\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy /y /d "C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.dll" "$(OutDir)"</Command>
+      <Command>IF NOT EXIST "$(OutDir)\SDL2.dll" copy "C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.dll" "$(OutDir)"</Command>
       <Message>Copy DLL</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -127,7 +127,7 @@
       <AdditionalLibraryDirectories>C:\Users\Daniel\Downloads\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy /y /d "C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.dll" "$(OutDir)"</Command>
+      <Command>IF NOT EXIST "$(OutDir)\SDL2.dll" copy "C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.dll" "$(OutDir)"</Command>
       <Message>Copy DLL</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -151,7 +151,7 @@
       <AdditionalLibraryDirectories>C:\Users\Daniel\Downloads\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy /y /d "C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.dll" "$(OutDir)"</Command>
+      <Command>IF NOT EXIST "$(OutDir)\SDL2.dll" copy "C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.dll" "$(OutDir)"</Command>
       <Message>Copy DLL</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -177,7 +177,7 @@
       <AdditionalLibraryDirectories>C:\Users\Daniel\Downloads\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy /y /d "C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.dll" "$(OutDir)"</Command>
+      <Command>IF NOT EXIST "$(OutDir)\SDL2.dll" copy "C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.dll" "$(OutDir)"</Command>
       <Message>Copy DLL</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
