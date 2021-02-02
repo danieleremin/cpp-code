@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
     }
 
     // Set color
-    renderer = SDL_CreateRenderer(window, -1, 0);
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_PRESENTVSYNC);
     SDL_SetRenderDrawColor(renderer, 27, 173, 174, 0);
     SDL_RenderClear(renderer);
     SDL_RenderPresent(renderer);
