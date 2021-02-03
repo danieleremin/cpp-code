@@ -28,8 +28,18 @@ int main(int argc, char* argv[]) {
     SDL_Texture* texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STATIC, SCREEN_WIDTH, SCREEN_HIGHT);
 
     if(renderer == NULL) {
+        SDL_DestroyWindow(window);
+        SDL_Quit();
         cout << "Could not create renderer \n" << SDL_GetError() << endl;
         return 3;
+    }
+
+    if(texture == NULL) {
+        SDL_DestroyRenderer(renderer);
+        SDL_DestroyWindow(window);
+        SDL_Quit();
+        cout << "Could not create texture \n" << SDL_GetError();
+        return 4;
     }
 
     bool quit = false;
