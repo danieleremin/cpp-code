@@ -16,8 +16,7 @@ int main(int argc, char* argv[]) {
 
     if (window == NULL) {
         SDL_Quit();
-        cout << "Window creation failed \n";
-        cout << "Could not create window: %s\n" << SDL_GetError() << endl;
+        cout << "Could not create window: \n" << SDL_GetError() << endl;
         return 2;
     }
 
@@ -25,6 +24,13 @@ int main(int argc, char* argv[]) {
     SDL_SetRenderDrawColor(renderer, 27, 173, 174, 0);
     SDL_RenderClear(renderer);
     SDL_RenderPresent(renderer);
+
+    SDL_Texture* texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STATIC, SCREEN_WIDTH, SCREEN_HIGHT);
+
+    if(renderer == NULL) {
+        cout << "Could not create renderer \n" << SDL_GetError() << endl;
+        return 3;
+    }
 
     bool quit = false;
     SDL_Event event;
@@ -39,6 +45,8 @@ int main(int argc, char* argv[]) {
         }
     }
 
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyTexture(texture);
     SDL_DestroyWindow(window);
     SDL_Quit();
     return 0;
