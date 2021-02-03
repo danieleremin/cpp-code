@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
     }
 
     // Set color
-    SDL_SetRenderDrawColor(renderer, 27, 173, 174, 0);
+    SDL_SetRenderDrawColor(renderer, 17, 114, 114, 0);
     SDL_RenderClear(renderer);
     SDL_RenderPresent(renderer);
 
@@ -42,11 +42,19 @@ int main(int argc, char* argv[]) {
         return 4;
     }
 
+    Uint32* buffer = new Uint32[SCREEN_WIDTH * SCREEN_HIGHT];
+    memset(buffer, 0xFF, SCREEN_WIDTH*SCREEN_HIGHT*sizeof(Uint32));
+
     bool quit = false;
     SDL_Event event;
     while (!quit) {
         // Update and draw particles
         // Check for messages or events
+
+        SDL_UpdateTexture(texture, NULL, buffer, SCREEN_WIDTH*sizeof(Uint32));
+        SDL_RenderClear(renderer);
+        SDL_RenderCopy(renderer, texture, NULL, NULL);
+        SDL_RenderPresent(renderer);
 
         while(SDL_PollEvent(&event)) {
             if(event.type == SDL_QUIT) {
@@ -55,6 +63,7 @@ int main(int argc, char* argv[]) {
         }
     }
 
+    delete [] buffer;
     SDL_DestroyRenderer(renderer);
     SDL_DestroyTexture(texture);
     SDL_DestroyWindow(window);
