@@ -43,7 +43,10 @@ int main(int argc, char* argv[]) {
     }
 
     Uint32* buffer = new Uint32[SCREEN_WIDTH * SCREEN_HIGHT];
-    memset(buffer, 0xFF, SCREEN_WIDTH*SCREEN_HIGHT*sizeof(Uint32));
+    memset(buffer, 0, SCREEN_WIDTH*SCREEN_HIGHT*sizeof(Uint32));
+
+    buffer[30000] = 0xFFFFFFFF;
+    buffer[50000] = 0xFFFFFFFF;
 
     bool quit = false;
     SDL_Event event;
