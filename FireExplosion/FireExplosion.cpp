@@ -20,11 +20,12 @@ int main(int argc, char* argv[]) {
         return 2;
     }
 
-    // Set color
+    /*
+    * // Another method of setting color
     SDL_SetRenderDrawColor(renderer, 17, 114, 114, 0);
     SDL_RenderClear(renderer);
     SDL_RenderPresent(renderer);
-
+    */
     SDL_Texture* texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STATIC, SCREEN_WIDTH, SCREEN_HIGHT);
 
     if(renderer == NULL) {
@@ -45,8 +46,11 @@ int main(int argc, char* argv[]) {
     Uint32* buffer = new Uint32[SCREEN_WIDTH * SCREEN_HIGHT];
     memset(buffer, 0, SCREEN_WIDTH*SCREEN_HIGHT*sizeof(Uint32));
 
-    buffer[30000] = 0xFFFFFFFF;
-    buffer[50000] = 0xFFFFFFFF;
+    for (int i = 0; i < SCREEN_WIDTH * SCREEN_HIGHT; i++) { buffer[i] = 0xFFFFFFFF; }
+
+    for (int i = 0; i < 240000; i++) { buffer[i] = 0x00FF8888; }
+    buffer[30000] = 0x00000000;
+    buffer[50000] = 0x00000000;
 
     bool quit = false;
     SDL_Event event;
