@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
     const int SCREEN_HIGHT = 600;
 
     SDL_Window* window = SDL_CreateWindow("Fire Explosion", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HIGHT, SDL_WINDOW_SHOWN);
-    SDL_Renderer* renderer;
+    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_PRESENTVSYNC);
 
     if (window == NULL) {
         SDL_Quit();
@@ -22,7 +22,6 @@ int main(int argc, char* argv[]) {
     }
 
     // Set color
-    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_PRESENTVSYNC);
     SDL_SetRenderDrawColor(renderer, 27, 173, 174, 0);
     SDL_RenderClear(renderer);
     SDL_RenderPresent(renderer);
