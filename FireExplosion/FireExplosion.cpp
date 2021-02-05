@@ -34,7 +34,6 @@ int main(int argc, char* argv[]) {
         cout << "Could not create renderer \n" << SDL_GetError() << endl;
         return 3;
     }
-
     if(texture == NULL) {
         SDL_DestroyRenderer(renderer);
         SDL_DestroyWindow(window);
@@ -48,7 +47,8 @@ int main(int argc, char* argv[]) {
 
     for (int i = 0; i < SCREEN_WIDTH * SCREEN_HIGHT; i++) { buffer[i] = 0xFFFFFFFF; }
 
-    for (int i = 0; i < 240000; i++) { buffer[i] = 0x00FF8888; }
+    for (int i = 100; i < 240000; i++) { buffer[i] = 0x00FF8888; }
+    for (int i = 0; i < 800; i++) { buffer[i] = 0x00000000; }
     buffer[30000] = 0x00000000;
     buffer[50000] = 0x00000000;
 
