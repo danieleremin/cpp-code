@@ -37,7 +37,7 @@ namespace de {
 			return false;
 		}
 
-		// Uint32* buffer = new Uint32[SCREEN_WIDTH * SCREEN_HIGHT];
+		m_buffer = new Uint32[SCREEN_WIDTH * SCREEN_HIGHT];
 		memset(m_buffer, 0, SCREEN_WIDTH * SCREEN_HIGHT * sizeof(Uint32));
 
 		for (int i = 0; i < SCREEN_WIDTH * SCREEN_HIGHT; i++) { m_buffer[i] = 0xFFFFFFFF; }
