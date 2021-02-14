@@ -2,15 +2,32 @@
 #include <iostream>
 #include "SDL.h"
 using namespace std;
+
+const int SCREEN_WIDTH = 800;
+const int SCREEN_HIGHT = 600;
+Uint32* buffer = new Uint32[SCREEN_WIDTH * SCREEN_HIGHT];
+
+void setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
+
+    Uint32 color = 0;
+
+    color += red;
+    color <<= 8;
+    color += green;
+    color <<= 8;
+    color += blue;
+    color <<= 8;
+    color += 0xFF;
+
+    buffer[y * SCREEN_HIGHT + x] = color;
+
+}
+
 int main(int argc, char* argv[]) {
     if (SDL_Init(SDL_INIT_VIDEO)) {
         cout << "SDL init failed \n";
-        cout << endl << "Press any key to quit. \n";
-        cin.get();
         return 1;
     }
-    const int SCREEN_WIDTH = 800;
-    const int SCREEN_HIGHT = 600;
 
     SDL_Window* window = SDL_CreateWindow("Fire Explosion", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HIGHT, SDL_WINDOW_SHOWN);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_PRESENTVSYNC);
@@ -43,15 +60,16 @@ int main(int argc, char* argv[]) {
         return 4;
     }
 
-    Uint32* buffer = new Uint32[SCREEN_WIDTH * SCREEN_HIGHT];
     memset(buffer, 0, SCREEN_WIDTH * SCREEN_HIGHT * sizeof(Uint32));
 
-    for (int i = 0; i < SCREEN_WIDTH * SCREEN_HIGHT; i++) { buffer[i] = 0xFFFFFFFF; }
-
-    for (int i = 100; i < 240000; i++) { buffer[i] = 0x00FF8888; }
-    for (int i = 0; i < 800; i++) { buffer[i] = 0x00000000; }
-    buffer[30000] = 0x00000000;
-    buffer[50000] = 0x00000000;
+    for (int y = 0; y < SCREEN_HIGHT; y++) {
+        for (int x = 0; x < SCREEN_WIDTH; x++) {
+            setPixel(y, x, 32, 0, 32);
+        }
+    }
+    for (int i = 0; i < 100; i++) {
+        setPixel((rand() % SCREEN_HIGHT), (rand() % SCREEN_WIDTH), (rand() % 256), (rand() % 256), (rand() % 256));
+    }
 
     bool quit = false;
     SDL_Event event;
