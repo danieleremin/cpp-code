@@ -4,8 +4,8 @@
 using namespace std;
 
 const int SCREEN_WIDTH = 800;
-const int SCREEN_HIGHT = 600;
-Uint32* buffer = new Uint32[SCREEN_WIDTH * SCREEN_HIGHT];
+const int SCREEN_HEIGHT = 600;
+Uint32* buffer = new Uint32[SCREEN_WIDTH * SCREEN_HEIGHT];
 
 void setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
 
@@ -19,7 +19,7 @@ void setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
     color <<= 8;
     color += 0xFF;
 
-    buffer[y * SCREEN_HIGHT + x] = color;
+    buffer[y * SCREEN_HEIGHT + x] = color;
 
 }
 
@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    SDL_Window* window = SDL_CreateWindow("Fire Explosion", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HIGHT, SDL_WINDOW_SHOWN);
+    SDL_Window* window = SDL_CreateWindow("Fire Explosion", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_PRESENTVSYNC);
 
     if (window == NULL) {
@@ -44,7 +44,7 @@ int main(int argc, char* argv[]) {
     SDL_RenderClear(renderer);
     SDL_RenderPresent(renderer);
     */
-    SDL_Texture* texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STATIC, SCREEN_WIDTH, SCREEN_HIGHT);
+    SDL_Texture* texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STATIC, SCREEN_WIDTH, SCREEN_HEIGHT);
 
     if (renderer == NULL) {
         SDL_DestroyWindow(window);
@@ -60,22 +60,32 @@ int main(int argc, char* argv[]) {
         return 4;
     }
 
-    memset(buffer, 0, SCREEN_WIDTH * SCREEN_HIGHT * sizeof(Uint32));
-
-    for (int y = 0; y < SCREEN_HIGHT; y++) {
+    memset(buffer, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
+    for (int y = 0; y < SCREEN_HEIGHT; y++) {
         for (int x = 0; x < SCREEN_WIDTH; x++) {
             setPixel(y, x, 32, 0, 32);
         }
     }
-    for (int i = 0; i < 100; i++) {
-        setPixel((rand() % SCREEN_HIGHT), (rand() % SCREEN_WIDTH), (rand() % 256), (rand() % 256), (rand() % 256));
-    }
 
+    int max = 0;
     bool quit = false;
     SDL_Event event;
     while (!quit) {
-        // Update and draw particles
-        // Check for messages or events
+        /*
+        for (int i = 0; i < ??; i++) {
+           setPixel((rand() % SCREEN_HEIGHT), (rand() % SCREEN_WIDTH), (rand() % 256), (rand() % 256), (rand() % 256));
+        }
+        */
+       int elapsed = SDL_GetTicks();
+       unsigned char green = (unsigned char)((1 + sin(elapsed * 0.0001))) * 128;
+       unsigned char blue = (unsigned char)((1 + sin(elapsed * 0.0002))) * 128;
+       unsigned char red = (unsigned char)((1 + cos(elapsed * 0.0003))) * 128;
+
+       for (int y = 0; y < SCREEN_HEIGHT; y++) {
+           for (int x = 0; x < SCREEN_WIDTH; x++) {
+              setPixel(y, x, red, green, blue);
+           }
+       }
 
         SDL_UpdateTexture(texture, NULL, buffer, SCREEN_WIDTH * sizeof(Uint32));
         SDL_RenderClear(renderer);
