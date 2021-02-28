@@ -9,8 +9,8 @@ namespace de {
 		m_x = ((2.0 * rand()) / RAND_MAX) - 1;
 		m_y = ((2.0 * rand()) / RAND_MAX) - 1;
 
-		xSpeed = 0.0005 * (((2.0 * rand()) / RAND_MAX) - 1);
-		ySpeed = 0.0005 * (((2.0 * rand()) / RAND_MAX) - 1);
+		xSpeed = 0.0003 * (((2.0 * rand()) / RAND_MAX) - 1);
+		ySpeed = 0.0003 * (((2.0 * rand()) / RAND_MAX) - 1);
 	}
 	void Particle::update() {
 		m_x += xSpeed;
