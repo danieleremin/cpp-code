@@ -8,10 +8,11 @@ namespace de {
 	private:
 		Particle* m_pParticles;
 	public:
-		const static int NPARTICLES = 5000;
+		const static int NPARTICLES = 1000;
 		Swarm();
 		~Swarm();
 		Particle* getParticles() { return m_pParticles; }
+		void update();
 	};
 }
 

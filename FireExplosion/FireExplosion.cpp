@@ -11,8 +11,7 @@ const int SCREEN_HEIGHT = 600;
 Uint32* buffer = new Uint32[SCREEN_WIDTH * SCREEN_HEIGHT];
 
 void setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
-
-   // if (x < 0 || x >= SCREEN_WIDTH || y < 0 || y >= SCREEN_HEIGHT) { return; }
+    if (x < 0 || x >= SCREEN_HEIGHT || y < 0 || y >= SCREEN_WIDTH) { return; }
 
     Uint32 color = 0;
 
@@ -25,8 +24,9 @@ void setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
     color += 0xFF;
 
     buffer[y * SCREEN_HEIGHT + x] = color;
-
 }
+
+void clear() {memset(buffer, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));}
 
 int main(int argc, char* argv[]) {
     if (SDL_Init(SDL_INIT_VIDEO)) {
@@ -80,6 +80,9 @@ int main(int argc, char* argv[]) {
            setPixel((rand() % SCREEN_HEIGHT), (rand() % SCREEN_WIDTH), (rand() % 256), (rand() % 256), (rand() % 256));
         }
         */
+        clear();
+        swarm.update();
+
         int elapsed = SDL_GetTicks();
         unsigned char green = (unsigned char)((1 + sin(elapsed * 0.0001)) * 128);
         unsigned char blue = (unsigned char)((1 + sin(elapsed * 0.0002)) * 128);
