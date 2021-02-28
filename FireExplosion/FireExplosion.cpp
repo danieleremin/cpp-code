@@ -1,13 +1,18 @@
 
 #include <iostream>
 #include "SDL.h"
+#include <stdlib.h>
+#include "Swarm.h"
 using namespace std;
+using namespace de;
 
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
 Uint32* buffer = new Uint32[SCREEN_WIDTH * SCREEN_HEIGHT];
 
 void setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
+
+   // if (x < 0 || x >= SCREEN_WIDTH || y < 0 || y >= SCREEN_HEIGHT) { return; }
 
     Uint32 color = 0;
 
@@ -28,6 +33,8 @@ int main(int argc, char* argv[]) {
         cout << "SDL init failed \n";
         return 1;
     }
+
+    srand(time(NULL));
 
     SDL_Window* window = SDL_CreateWindow("Fire Explosion", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_PRESENTVSYNC);
@@ -60,12 +67,9 @@ int main(int argc, char* argv[]) {
         return 4;
     }
 
+    Swarm swarm;
+
     memset(buffer, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
-    for (int y = 0; y < SCREEN_HEIGHT; y++) {
-        for (int x = 0; x < SCREEN_WIDTH; x++) {
-            setPixel(y, x, 32, 0, 32);
-        }
-    }
 
     int max = 0;
     bool quit = false;
@@ -76,16 +80,29 @@ int main(int argc, char* argv[]) {
            setPixel((rand() % SCREEN_HEIGHT), (rand() % SCREEN_WIDTH), (rand() % 256), (rand() % 256), (rand() % 256));
         }
         */
-       int elapsed = SDL_GetTicks();
-       unsigned char green = (unsigned char)((1 + sin(elapsed * 0.0001)) * 128);
-       unsigned char blue = (unsigned char)((1 + sin(elapsed * 0.0002)) * 128);
-       unsigned char red = (unsigned char)((1 + sin(elapsed * 0.0003)) * 128);
+        int elapsed = SDL_GetTicks();
+        unsigned char green = (unsigned char)((1 + sin(elapsed * 0.0001)) * 128);
+        unsigned char blue = (unsigned char)((1 + sin(elapsed * 0.0002)) * 128);
+        unsigned char red = (unsigned char)((1 + sin(elapsed * 0.0003)) * 128);
 
+        const Particle * const pParticles = swarm.getParticles();
+
+        for (int i = 0; i < Swarm::NPARTICLES; i++) {
+            Particle particle = pParticles[i];
+
+            int x = (particle.m_x + 1) * SCREEN_WIDTH/2;
+            int y = (particle.m_y + 1) * SCREEN_HEIGHT/2;
+
+            setPixel(y, x, red, green, blue);
+        }
+
+       /*
        for (int y = 0; y < SCREEN_HEIGHT; y++) {
            for (int x = 0; x < SCREEN_WIDTH; x++) {
-              setPixel(y, x, red, green, blue);
+              setPixel(x, y, red, green, blue);
            }
        }
+       */
 
         SDL_UpdateTexture(texture, NULL, buffer, SCREEN_WIDTH * sizeof(Uint32));
         SDL_RenderClear(renderer);

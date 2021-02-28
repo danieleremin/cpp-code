@@ -184,9 +184,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="FireExplosion.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="Swarm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Particle.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Swarm.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="FireExplosion.rc" />
