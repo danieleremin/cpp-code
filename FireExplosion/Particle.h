@@ -6,8 +6,8 @@ namespace de {
 		double m_x;
 		double m_y;
 	private:
-		double xSpeed;
-		double ySpeed;
+		double m_speed;
+		double m_direction;
 	public:
 		Particle();
 		void update();

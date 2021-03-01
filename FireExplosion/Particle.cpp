@@ -1,22 +1,21 @@
 #include "Particle.h"
 #include <stdlib.h>
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
 
 namespace de {
-	Particle::Particle() {
-		m_x = ((2.0 * rand()) / RAND_MAX) - 1;
-		m_y = ((2.0 * rand()) / RAND_MAX) - 1;
-
-		xSpeed = 0.0003 * (((2.0 * rand()) / RAND_MAX) - 1);
-		ySpeed = 0.0003 * (((2.0 * rand()) / RAND_MAX) - 1);
+	Particle::Particle(): m_x(0), m_y(0) {
+		m_direction = (2 * M_PI * rand()) / RAND_MAX;
+		m_speed = (0.001 * rand()) / RAND_MAX;
 	}
 	void Particle::update() {
-		m_x += xSpeed;
-		m_y += ySpeed;
+		double xspeed = m_speed * cos(m_direction);
+		double yspeed = m_speed * sin(m_direction);
 
-		if (m_x <= -1.0 || m_x >= 1.0) { xSpeed = -xSpeed; }
-		if (m_y <= -1.0 || m_y >= 1.0) { ySpeed = -ySpeed; }
+		m_x += xspeed;
+		m_y += yspeed;
 	}
 }

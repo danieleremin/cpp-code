@@ -75,11 +75,6 @@ int main(int argc, char* argv[]) {
     bool quit = false;
     SDL_Event event;
     while (!quit) {
-        /*
-        for (int i = 0; i < ??; i++) {
-           setPixel((rand() % SCREEN_HEIGHT), (rand() % SCREEN_WIDTH), (rand() % 256), (rand() % 256), (rand() % 256));
-        }
-        */
         clear();
         swarm.update();
 
@@ -94,7 +89,7 @@ int main(int argc, char* argv[]) {
             Particle particle = pParticles[i];
 
             int x = (particle.m_x + 1) * SCREEN_WIDTH/2;
-            int y = (particle.m_y + 1) * SCREEN_HEIGHT/2;
+            int y = particle.m_y * SCREEN_WIDTH / 2 + SCREEN_HEIGHT/2;
 
             setPixel(y, x, red, green, blue);
         }
