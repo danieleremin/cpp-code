@@ -7,12 +7,13 @@ namespace de {
 	class Swarm {
 	private:
 		Particle* m_pParticles;
+		int lastTime;
 	public:
 		const static int NPARTICLES = 1000;
 		Swarm();
 		~Swarm();
 		Particle* getParticles() { return m_pParticles; }
-		void update();
+		void update(int elapsed);
 	};
 }
 

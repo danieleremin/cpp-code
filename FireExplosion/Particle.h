@@ -10,7 +10,7 @@ namespace de {
 		double m_direction;
 	public:
 		Particle();
-		void update();
+		void update(int interval);
 	};
 }
 #endif /* !PARTICLE_H */
