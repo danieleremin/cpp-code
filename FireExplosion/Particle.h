@@ -8,6 +8,7 @@ namespace de {
 	private:
 		double m_speed;
 		double m_direction;
+		void init();
 	public:
 		Particle();
 		void update(int interval);
