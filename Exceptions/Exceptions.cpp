@@ -5,6 +5,7 @@ void possibleError() {
 	// Error check here
 	bool error1 = false;
 	bool error2 = true;
+	bool error3 = false;
 
 	if (error1) {
 		throw "Error 1";
@@ -12,6 +13,7 @@ void possibleError() {
 	if (error2) {
 		throw string("Something else went wrong.");
 	}
+	if (error3) { throw 3; }
 }
 
 void usesPossibleError() { possibleError(); }
