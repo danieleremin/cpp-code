@@ -1,5 +1,5 @@
 #include <iostream>
-#include "GoWrong.h"
+#include "Classes.h"
 using namespace std;
 
 void possibleError() {
@@ -33,10 +33,15 @@ int main() {
 	catch (string &e) {
 		cout << "string error message: " << e << endl;
 	}
-	cout << "Program still running \n";
-	
 	try { CanGoWrong error; }
 	catch (bad_alloc& e) { cout << "Caught Exception " << e.what() << endl; }
-	
+
+	Test test;
+	try { test.goesWrong(); }
+	catch (MyException& e) {
+		cout << e.what() << endl;
+	}
+
+	cout << "Program still running \n";
 	return 0;
 }
