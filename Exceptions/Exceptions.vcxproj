@@ -144,7 +144,7 @@
     <ClCompile Include="Exceptions.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GoWrong.h" />
+    <ClInclude Include="Classes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
