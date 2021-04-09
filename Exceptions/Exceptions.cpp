@@ -2,6 +2,18 @@
 #include "Classes.h"
 using namespace std;
 
+void goesWrong() {
+	bool error1Detected = false;
+	bool error2Detected = true;
+
+	if (error1Detected) {
+		throw bad_alloc();
+	}
+	if (error2Detected) {
+		throw exception();
+	}
+}
+
 void possibleError() {
 	// Error check here
 	bool error1 = false;
@@ -41,6 +53,10 @@ int main() {
 	catch (MyException& e) {
 		cout << e.what() << endl;
 	}
+
+	try { goesWrong(); }
+	catch (bad_alloc& e) { cout << "Catching bad_alloc: " << e.what() << endl; }
+	catch (exception &e) { cout << "Catching exception: " << e.what() << endl; }
 
 	cout << "Program still running \n";
 	return 0;
