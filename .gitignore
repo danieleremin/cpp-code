@@ -13,4 +13,5 @@ FireExplosion.exe
 *.obj
 *.ilk
 *.iobj
-FireExplosion.vcxproj.FileListAbsolute.txt
+*.vcxproj.FileListAbsolute.txt
+test.txt
