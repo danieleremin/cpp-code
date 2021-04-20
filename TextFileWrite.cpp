@@ -18,6 +18,7 @@ int main() {
 	}
 	else {
 		cout << "Could not create file: " << outputFileName << endl;
+		return 1;
 	}
 	
 	return 0;
