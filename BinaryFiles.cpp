@@ -30,7 +30,7 @@ int main() {
 	else {
 		cout << "Could not create file " << fileName;
 		return 1;
-	}
+	} 
 	
 	// Read binary file
 	
@@ -40,7 +40,7 @@ int main() {
 	
 	inputFile.open(fileName, ios::binary);
 	
-	if(outputFile.is_open()) {
+	if(inputFile.is_open()) {
 		inputFile.read(reinterpret_cast<char*>(&someoneElse), sizeof(Person));
 		inputFile.close();
 	}
