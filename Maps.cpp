@@ -17,7 +17,15 @@ public:
 	}
 	
 	void print() const {
-		cout << name << ": " << age << endl;
+		cout << name << ": " << age;
+	}
+	bool operator<(const Person &other) const {
+		if(name == other.name) {
+			return age < other.age;
+		}
+		else {
+			return name < other.name;
+		}
 	}
 };
 
@@ -49,7 +57,7 @@ int main() {
 	ages["Bob"] = 58;
 	cout << ages["Bob"] << endl;
 	
-	// Custom Objects
+	// Custom Value
 	
 	map<int, Person> people;
 	
@@ -62,6 +70,21 @@ int main() {
 	for(map<int, Person>::iterator it = people.begin(); it != people.end(); it++) {
 		cout << it->first << " - ";
 		it->second.print();
+	}
+	
+	// Custom Key
+	
+	map<Person, int> people2;
+	
+	people2[Person("Mike", 43)] = 42;
+	people2[Person("Mike", 404)] = 123;
+	people2[Person("Jeff", 88)] = 1;
+	people2[Person("Sue", 37)] = 33;
+	
+	for(map<Person, int>::iterator it = people2.begin(); it != people2.end(); it++) {
+		cout << it->second << " - " << flush;
+		it->first.print();
+		cout << endl;
 	}
 	
 	return 0;
