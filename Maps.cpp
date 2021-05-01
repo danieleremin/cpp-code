@@ -2,6 +2,20 @@
 #include <map>
 using namespace std;
 
+class Person {
+private:
+	string name;
+	int age; 
+public:
+	Person(): name(""), age(0) {}
+	Person(string name, int age) :
+		name(name), age(age)
+		{}
+	void print() const {
+		cout << name << ": " << age << endl;
+	}
+};
+
 int main() {
 	map<string, int> ages;
 	// pair<string, int> addToMap("Peter", 84);
@@ -29,6 +43,19 @@ int main() {
 	
 	ages["Bob"] = 58;
 	cout << ages["Bob"] << endl;
+	
+	// Custom Objects
+	
+	map<int, Person> people;
+	
+	people[0] = Person("Mike", 39);
+	people[1] = Person("Bob", 23);
+	people[2] = Person("Daniel", 12);
+	
+	for(map<int, Person>::iterator it = people.begin(); it != people.end(); it++) {
+		cout << it->first << " - ";
+		it->second.print();
+	}
 	
 	return 0;
 }
