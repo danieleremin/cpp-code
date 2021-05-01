@@ -8,9 +8,14 @@ private:
 	int age; 
 public:
 	Person(): name(""), age(0) {}
-	Person(string name, int age) :
-		name(name), age(age)
-		{}
+	Person(string name, int age) : name(name), age(age) {}
+	
+	Person(const Person &other) {
+		cout << "Copy constructor used" << endl;
+		name = other.name;
+		age = other.age;
+	}
+	
 	void print() const {
 		cout << name << ": " << age << endl;
 	}
@@ -51,6 +56,8 @@ int main() {
 	people[0] = Person("Mike", 39);
 	people[1] = Person("Bob", 23);
 	people[2] = Person("Daniel", 12);
+	
+	people.insert(make_pair(33, Person("Joe", 43)));
 	
 	for(map<int, Person>::iterator it = people.begin(); it != people.end(); it++) {
 		cout << it->first << " - ";
