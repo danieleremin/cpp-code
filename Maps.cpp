@@ -87,5 +87,29 @@ int main() {
 		cout << endl;
 	}
 	
+	// Multimap
+	
+	multimap<int, string> lookup;
+	
+	lookup.insert(make_pair(30, "John"));
+	lookup.insert(make_pair(19, "Jake"));
+	lookup.insert(make_pair(15, "Vicky"));
+	lookup.insert(make_pair(8, "Don"));
+	lookup.insert(make_pair(15, "Dylan"));
+	
+	for(multimap<int, string>::iterator it=lookup.begin(); it != lookup.end(); it++) {
+		cout << it->first << ": " << it->second << endl;
+	}
+	cout << endl;
+	for(multimap<int, string>::iterator it=lookup.find(15); it != lookup.end(); it++) {
+		cout << it->first << ": " << it->second << endl;
+	}
+	cout << endl;
+	pair<multimap<int, string>::iterator, multimap<int, string>::iterator> its = lookup.equal_range(30);
+	auto its2 = lookup.equal_range(30);
+	for(multimap<int, string>::iterator it = its.first; it != its.second; it++) {
+		cout << it->first << ": " << it->second << endl;
+	}
+	
 	return 0;
 }
