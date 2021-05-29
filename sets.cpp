@@ -2,6 +2,8 @@
 #include <set>
 using namespace std;
 
+// Custom classes work the same way.
+
 int main() {
 	set<int> numbers;
 	
@@ -24,6 +26,9 @@ int main() {
 	}
 	if(numbers.count(20)) {
 		cout << "Number found. \n";
+	}
+	else {
+		cout << "Not found \n";
 	}
 	
 	return 0;
