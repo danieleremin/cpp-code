@@ -2,6 +2,31 @@
 #include <vector>
 using namespace std;
 
+class Test {
+	int id;
+	string name;
+public:
+	Test(int id, string name): id(id), name(name) {}
+	void print() {
+		cout << id << ": " << name << endl;
+	}
+	
+	/* bool operator<(const Test& other) const {
+		if(name == other.name) {
+			return id < other.id;
+		}
+		else {
+			return name < other.name;
+		}
+	} */
+	
+	friend bool comp(const Test &a, const Test &b)
+};
+
+bool comp(const Test &a, const Test &b) {
+	return a.name < b.name;
+}
+
 int main() {
 	vector<string> strings;
 	
@@ -66,6 +91,22 @@ int main() {
 		}
 		cout << endl;
 	}
+	
+	// Sorting Vectors
+	vector<Test> tests;
+	
+	tests.push_back(Test(5, "Mike"));
+	tests.push_back(Test(10, "John"));
+	tests.push_back(Test(2, "Bob"));
+	tests.push_back(Test(3, "Jerry"));
+	
+	sort(tests.begin(), tests.end(), comp);
+	
+	for(int i=0; i<tests.size(); i++) {
+		tests[i].print();
+	}
+	
+	// Look at deque.
 	
 	return 0;
 }
