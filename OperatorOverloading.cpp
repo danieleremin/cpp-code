@@ -10,11 +10,10 @@ public:
 	Test(int id, string name): id(id), name(name) {}
 	
 	void print() {
+		// No longer necessary
 		cout << id << ": " << name << endl;
 	}
 	const Test&operator=(const Test &other) {
-		cout << "Assignment running \n";
-		
 		id = other.id;
 		name = other.name;
 		
@@ -24,7 +23,10 @@ public:
 		/* id = other.id;
 		name = other.name; */
 		*this = other;
-		cout << "Copy constructor running \n";
+	}
+	friend ostream &operator<<(ostream &out, const Test &test) {
+		out << test.id << ": " << test.name;
+		return out;
 	}
 };
 
@@ -47,6 +49,12 @@ int main() {
 	// Copy initialization
 	Test test4 = test1;
 	test4.print();
+	
+	cout << endl;
+	
+	// Bit shift overloading and overloading insertion operator for printing
+	Test test5(18, "Jake");
+	cout << test5 << endl;
 	
 	return 0;
 }
