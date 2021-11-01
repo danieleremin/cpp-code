@@ -1,4 +1,4 @@
-#include "Complex.hpp"
+#include "Complex.h"
 
 namespace de {
 	ostream &operator<<(ostream &out, const Complex &c) {
@@ -33,9 +33,15 @@ Complex::Complex(const Complex &other) {
 }
 
 const Complex &Complex::operator=(const Complex &other) {
-	real = other.real;
-	imaginary = other.imaginary;
+		real = other.real;
+		imaginary = other.imaginary;
 
-	return *this;
+		return *this;
+	}
+bool operator==(const Complex &other) const {
+	return real == other.real && imaginary == other.imaginary;
 }
+bool operator!=(const Complex &other) const {
+	return !(*this==other);
 }
+} // Namespace de

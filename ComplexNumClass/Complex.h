@@ -1,4 +1,5 @@
-#pragma once
+#ifndef COMPLEX_H
+#define COMPLEX_H
 
 #include <iostream>
 using namespace std;
@@ -22,6 +23,9 @@ public:
 	double getImaginary() const {
 		return imaginary;
 	}
+	
+	bool operator==(const Complex &other) const;
+	bool operator!=(const Complex &other) const;
 };
 
 ostream &operator<<(ostream &out, const Complex &c);
@@ -29,4 +33,6 @@ Complex operator+(const Complex &c1, const Complex &c2);
 Complex operator+(const Complex &c1, double d);
 Complex operator+(double d, const Complex &c1);
 
-}
+} // Namespace de
+
+#endif
