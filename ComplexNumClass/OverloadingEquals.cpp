@@ -13,6 +13,9 @@ int main() {
 		cout << "Not equal \n";
 	}
 	if(c1 != c2) {
-		cout << "Not equal! \n";
+		cout << "Not equal \n";
+	}
+	else {
+		cout << "Equal \n";
 	}
 }
