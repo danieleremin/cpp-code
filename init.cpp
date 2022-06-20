@@ -1,6 +1,21 @@
 #include <iostream>
 #include <vector>
+#include <initializer_list>
 using namespace std;
+
+class Test {
+public:
+	Test(initializer_list<string> texts) {
+		for(auto value: texts) {
+			cout << value << endl;
+		}
+	}
+	void print(initializer_list<string> texts) {
+		for(auto value: texts) {
+			cout << value: texts;
+		}
+	}
+};
 
 int main() {
 	int value{5};
@@ -22,18 +37,27 @@ int main() {
 	int *pSomething{nullptr}; // pointer can be initialized using &value or can be left blank for null pointer
 	cout << *pSomething << endl;
 	
-	int numbers1[5]{};cn
+	int numbers1[5]{};
 	cout << numbers1[1] << endl;	
 	
 	struct {
 		int value;
 		string text;
-	} si = {5, "Hi"}'
+	} s1 = {5, "Hi"};
 	cout << s1.text << endl;
 	cout << s1.value << endl;
 	
 	vector<string> strings{"one", "two", "three"};
 	cout << strings[2] << endl;
+	
+	// initializer lists
+	
+	vector<int> numbers2 { 1, 3, 4, 6 };
+	cout << numbers2[2] << endl;
+	
+	Test test{"apple", "banana", "orange"};
+	
+	test.print({"one", "two", "three", "four"});
 	
 	return 0;
 }
