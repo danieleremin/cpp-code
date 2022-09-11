@@ -60,5 +60,20 @@ int main() {
 	vector<Test> vec;
 	vec.push_back(Test());
 	
+	// Rvalue (commented code won't work)
+	int value1 = 7;
+	int *pValue1 = &value1;
+	// int *pValue2 = &7;
+	
+	Test *pTest1 = &test1;
+	// Test *pTest2 = &getTest();
+	
+	int *pValue3 = &++value1;
+	cout << *pValue3 << endl;
+	
+	// int *pValue4 = &value1++;
+	
+	// int *s = &(7 + value1); 
+	
 	return 0;
 }
