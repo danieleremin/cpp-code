@@ -10,34 +10,34 @@ private:
 public:
 	Test() {
 		cout << "constructor \n";
-		_pBuffer = new int[SIZE]{};
-		// memset(_pBuffer, 0, sizeof(int)*SIZE);
+		pBuffer = new int[SIZE]{};
+		// memset(pBuffer, 0, sizeof(int)*SIZE);
 	} 
 	Test(int i) {
 		cout << "parameterized constructor \n";
-		_pBuffer = new int[SIZE]{};
+		pBuffer = new int[SIZE]{};
 		
 		for(int i=0; i<SIZE; i++) {
-			_pBuffer[i] = 7*1;
+			pBuffer[i] = 7*1;
 		}
 	}
 	Test(const Test &other) {
 		cout << "copy constructor \n";
 		
-		_pBuffer = new int[SIZE]{};
-		memcpy(_pBuffer, other._pBuffer, SIZE*sizeof(int));
+		pBuffer = new int[SIZE]{};
+		memcpy(pBuffer, other.pBuffer, SIZE*sizeof(int));
 	}
 	Test &operator=(const Test &other) {
 		cout << "assignment \n";
-		_pBuffer = new int[SIZE]{};
-		memcpy(_pBuffer, other._pBuffer, SIZE*sizeof(int));
+		pBuffer = new int[SIZE]{};
+		memcpy(pBuffer, other.pBuffer, SIZE*sizeof(int));
 		
 		return *this;
 	}
 	~Test() {
 		cout << "destructor \n";
 		
-		delete [] _pBuffer;
+		delete [] pBuffer;
 	}
 	friend ostream &operator<<(ostream &out, const Test &test);
 };
@@ -49,6 +49,14 @@ ostream &operator<<(ostream &out, const Test &test) {
 
 Test getTest() {
 	return Test();
+}
+
+void check(const Test &value) {
+	cout << "lValue function! \n";
+}
+
+void check(Test &&value) {
+	cout << "rValue function! \n";
 }
 
 int main() {
@@ -76,7 +84,7 @@ int main() {
 	// int *s = &(7 + value1); 
 	
 	// -------------------------
-	// L value references
+	// Lvalue references
 	
 	Test &rTest1 = test1;
 	// Test &rTest2 = getTest();
@@ -84,6 +92,14 @@ int main() {
 	const Test &rTest2 = getTest();
 	
 	Test test2(Test(1));
+	
+	// Rvalue References
+	
+	Test &ltest1 = test1;
+	Test &&rtest1 = getTest(); // Test() can be used
+	
+	check(test1);
+	check(getTest());
 	
 	return 0;
 }
