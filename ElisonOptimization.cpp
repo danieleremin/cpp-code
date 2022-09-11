@@ -75,5 +75,15 @@ int main() {
 	
 	// int *s = &(7 + value1); 
 	
+	// -------------------------
+	// L value references
+	
+	Test &rTest1 = test1;
+	// Test &rTest2 = getTest();
+	
+	const Test &rTest2 = getTest();
+	
+	Test test2(Test(1));
+	
 	return 0;
 }
