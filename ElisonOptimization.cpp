@@ -1,3 +1,5 @@
+// Video 1:40
+
 #include <iostream>
 #include <vector>
 #include <memory.h>
@@ -6,7 +8,7 @@ using namespace std;
 class Test {
 private:
 	static const int SIZE=100;
-	int *pBuffer;
+	int *pBuffer{nullptr};
 public:
 	Test() {
 		cout << "constructor \n";
@@ -27,6 +29,12 @@ public:
 		pBuffer = new int[SIZE]{};
 		memcpy(pBuffer, other.pBuffer, SIZE*sizeof(int));
 	}
+	
+	Test(Test &&other) {
+		pBuffer = other.pBuffer;
+		other.pBuffer = nullptr;
+	}
+	
 	Test &operator=(const Test &other) {
 		cout << "assignment \n";
 		pBuffer = new int[SIZE]{};
