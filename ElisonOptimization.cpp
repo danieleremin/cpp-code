@@ -25,12 +25,12 @@ public:
 	}
 	Test(const Test &other) {
 		cout << "copy constructor \n";
-		
 		pBuffer = new int[SIZE]{};
 		memcpy(pBuffer, other.pBuffer, SIZE*sizeof(int));
 	}
 	
 	Test(Test &&other) {
+		cout << "Move constructor \n";
 		pBuffer = other.pBuffer;
 		other.pBuffer = nullptr;
 	}
