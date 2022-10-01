@@ -1,5 +1,3 @@
-// Video 1:40
-
 #include <iostream>
 #include <vector>
 #include <memory.h>
