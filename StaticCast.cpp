@@ -3,7 +3,7 @@ using namespace std;
 
 class Parent {
 public:
-	void speak() {
+	virtual void speak() {
 		cout << "Hi from parent \n";
 	}
 };
@@ -23,10 +23,15 @@ int main() {
 	
 	Parent *ppb = &brother;
 	
-	Brother *pbb = static_cast<Brother *>(ppb);
+	Brother *pbb = dynamic_cast<Brother *>(ppb);
+	if(pbb == nullptr) {
+		cout << "Invalid cast \n";
+	}
+	else {
 	cout << ppb << endl;
+	}
 	
-	Parent &&p = static_cast<Parent &&>(Parent); // Parent() can be used
+	Parent &&p = static_cast<Parent &&>(Parent()); // Parent can be used sometimes
 	p.speak();
 	
 	/* float value = 3.23;
@@ -35,6 +40,8 @@ int main() {
 	/* Parent *pp = &brother;
 	Brother *pb = static_cast<Brother *>(&parent);
 	cout << pb << endl; */
+	
+	// When commiting to github make the summary Dynamic cast
 	
 	return 0;
 }
