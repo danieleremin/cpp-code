@@ -20,8 +20,11 @@ int main() {
 	
 	Parent parent;
 	Brother brother;
+	Sister sister;
 	
 	Parent *ppb = &brother;
+	
+	Sister *pbb = reinterpret_cast<Sister *>(ppb); // Static cast can be used, reinterpret cast is rarely used
 	
 	Brother *pbb = dynamic_cast<Brother *>(ppb);
 	if(pbb == nullptr) {
