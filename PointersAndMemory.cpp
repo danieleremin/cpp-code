@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 #include <sstream>
 using namespace std;
 
@@ -22,6 +23,27 @@ void change2(double &value) {
   value = 43.21;
   // Second cout in main function
 }
+
+Class Test {
+public:
+	Test() {
+		cout << "created \n";
+	}
+	void greet() {
+		cout << "hello \n";
+	}
+	~Test() {
+		cout << "destroyed \n";
+	}
+};
+
+class Temp {
+private:
+	unique_ptr<Test[]> pTest();
+public:
+	Temp(): pTest(new Test[2]) {}
+};
+
 int main() {
   int value1 = 3;
   int* pValue1 = &value1;
@@ -48,6 +70,15 @@ int main() {
   pAnimal[5].speak();
   
   delete [] pAnimal;
+  
+  // Unique pointers (auto pointers/smart pointers), they deallocate memory after the scope
+  // Curly brackets can be used to reduce the scope of the variable
+ /*  unique_ptr<Test[]> pTest(new Test[2]);
+  
+  pTest[1].greet(); */
+  Temp temp;
+  
+  cout << "finished \n";
   
   return 0;
 }
