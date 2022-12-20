@@ -78,7 +78,22 @@ int main() {
   pTest[1].greet(); */
   Temp temp;
   
-  cout << "finished \n";
+  cout << "finished unique \n";
+  
+  // Shared pointers
+  
+  shared_ptr<Test> pTest2(nullptr); 
+  
+  {
+	  shared_ptr<Test> pTest1 = make_shared<Test>();
+	  
+	  pTest2 = pTest1;
+	  
+	  auto pTest3 = pTest1;
+	  }
+  // new can also be used but make_shared is more efficient
+  
+  cout << "finished shared \n";
   
   return 0;
 }
