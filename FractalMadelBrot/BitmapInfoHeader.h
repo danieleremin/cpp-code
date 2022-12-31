@@ -1,6 +1,5 @@
 #pragma once
 #include <cstdint>
-using namespace std;
 #pragma pack(2)
 
 struct BitmapInfoHeader {
@@ -12,7 +11,7 @@ struct BitmapInfoHeader {
 	int32_t compression{ 0 };
 	int32_t dataSize{ 0 };
 	int32_t horizontalResolution{ 2400 };
-	int32_t verticalResolution{ 2400 }
-		int32_t colors{ 0 }
+	int32_t verticalResolution{ 2400 };
+	int32_t colors{ 0 };
 	int32_t importantColors{ 0 };
 };
