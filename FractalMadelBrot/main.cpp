@@ -35,6 +35,17 @@ int main() {
 		}
 	}
 
+	cout << endl;
+
+	int count = 0;
+	for (int i = 0; i <= Mandelbrot::MAX_ITERATIONS; i++) {
+		cout << histogram[i] << " " << flush;
+	}
+
+	cout << count << "; " << WIDTH * HEIGHT << endl;
+
+	cout << endl;
+
 	cout << min << ", " << max << endl;
 	 
 	bitmap.write("test.bmp"); 
