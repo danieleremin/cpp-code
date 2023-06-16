@@ -8,7 +8,7 @@ namespace de {
 		calculateIteration();
 		calculateTotalIterations();
 		drawFractal();
-		writeBitmap("fractalMandelbrot.bmp");
+		writeBitmap(name);
 	}
 
 	FractalCreator::FractalCreator(int width, int height) : m_width(width), m_height(height),
