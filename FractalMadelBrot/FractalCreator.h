@@ -26,11 +26,11 @@ namespace de {
 		void calculateIteration();
 		void calculateTotalIterations();
 		void drawFractal();
-		void addZoom(const Zoom& zoom);
 		void writeBitmap(string name);
 	public:
 		FractalCreator(int width, int height);
 		virtual ~FractalCreator();
+		void addZoom(const Zoom& zoom);
 		void run(string name);
 	};
 }
