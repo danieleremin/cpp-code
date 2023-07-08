@@ -4,11 +4,19 @@ using namespace de;
 
 int main() {
 
-	int height = 600;
+	// Create Image
 	FractalCreator fractalCreator(800, 600);
+
+	// Add color ranges, make random later
+	fractalCreator.addRange(0.3, RGB(255, 0, 0));
+	fractalCreator.addRange(0.5, RGB(255, 255, 0));
+	fractalCreator.addRange(1, RGB(255, 255, 255));
+
+	// add zooms
 	fractalCreator.addZoom(Zoom(295, 202, 0.1));
 	fractalCreator.addZoom(Zoom(312, 304, 0.1));
 
+	// export file
 	fractalCreator.run("test.bmp");
 
 	return 0;

@@ -4,6 +4,7 @@
 #include <iostream>
 #include <cstdint>
 #include <math.h>
+#include <vector>
 #include "Bitmap.h"
 #include "Bitmap.h"
 #include "Mandelbrot.h"
@@ -23,12 +24,16 @@ namespace de {
 		Bitmap m_bitmap;
 		ZoomList m_zoomList;
 
+		vector<int> m_ranges;
+		vector<RGB> m_colors;
+
 		void calculateIteration();
 		void calculateTotalIterations();
 		void drawFractal();
 		void writeBitmap(string name);
 	public:
 		FractalCreator(int width, int height);
+		void addRange(double rangeEnd, const RGB& rgb);
 		virtual ~FractalCreator();
 		void addZoom(const Zoom& zoom);
 		void run(string name);
