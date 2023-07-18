@@ -8,9 +8,10 @@ int main() {
 	FractalCreator fractalCreator(800, 600);
 
 	// Add color ranges, make random later
+	fractalCreator.addRange(0.0, RGB(0, 0, 0));
 	fractalCreator.addRange(0.3, RGB(255, 0, 0));
 	fractalCreator.addRange(0.5, RGB(255, 255, 0));
-	fractalCreator.addRange(1, RGB(255, 255, 255));
+	fractalCreator.addRange(1.0, RGB(255, 255, 255));
 
 	// add zooms
 	fractalCreator.addZoom(Zoom(295, 202, 0.1));
@@ -18,6 +19,8 @@ int main() {
 
 	// export file
 	fractalCreator.run("test.bmp");
+
+	cout << "Finished \n";
 
 	return 0;
 }

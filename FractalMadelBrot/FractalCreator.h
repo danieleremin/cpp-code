@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <memory>
 #include <iostream>
 #include <cstdint>
@@ -26,9 +27,13 @@ namespace de {
 
 		vector<int> m_ranges;
 		vector<RGB> m_colors;
+		vector<int> m_rangeTotals;
+
+		bool m_bGotFirstRange = false;
 
 		void calculateIteration();
 		void calculateTotalIterations();
+		void calculateRangeTotals();
 		void drawFractal();
 		void writeBitmap(string name);
 	public:
