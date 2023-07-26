@@ -23,7 +23,7 @@
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{00aab2bd-0275-450c-9473-7a2b64454063}</ProjectGuid>
     <RootNamespace>FireExplosion</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <VcpkgTriplet Condition="'$(Platform)'=='x64'">x64-windows-static</VcpkgTriplet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -98,7 +98,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>C:\Users\Daniel\Downloads\SDL2\lib\x86\SDL2.lib;C:\Users\Daniel\Downloads\SDL2\lib\x86\SDL2main.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.18362.0\um\x86\shell32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\Daniel\Downloads\SDL2\lib\x86\SDL2.lib;C:\Users\Daniel\Downloads\SDL2\lib\x86\SDL2main.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0\um\x86\shell32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\Daniel\Downloads\SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -124,7 +124,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>C:\Users\Daniel\Downloads\SDL2\lib\x86\SDL2.lib;C:\Users\Daniel\Downloads\SDL2\lib\x86\SDL2main.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.18362.0\um\x86\shell32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\Daniel\Downloads\SDL2\lib\x86\SDL2.lib;C:\Users\Daniel\Downloads\SDL2\lib\x86\SDL2main.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0\um\x86\shell32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\Daniel\Downloads\SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -174,7 +174,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.lib;C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2main.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.18362.0\um\x64\shell32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2.lib;C:\Users\Daniel\Downloads\SDL2\lib\x64\SDL2main.lib;shell32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\Daniel\Downloads\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
