@@ -124,7 +124,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>C:\Users\Daniel\Downloads\SDL2\lib\x86\SDL2.lib;C:\Users\Daniel\Downloads\SDL2\lib\x86\SDL2main.lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0\um\x86\shell32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\Daniel\Downloads\SDL2\lib\x86\SDL2.lib;C:\Users\Daniel\Downloads\SDL2\lib\x86\SDL2main.lib;shell32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\Daniel\Downloads\SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
