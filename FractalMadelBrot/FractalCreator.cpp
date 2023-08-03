@@ -29,6 +29,24 @@ namespace de {
 		m_bGotFirstRange = true;
 	}
 
+	int FractalCreator::getRange(int iterations) const {
+
+		int range = 0;
+
+		for (int i = 1; i < m_ranges.size(); i++) {
+			range = i;
+
+			if (m_ranges[i] > iterations) break;
+		}
+
+		range--;
+
+		assert(range > -1);
+		assert(range < m_ranges.size());
+
+		return range;
+	}
+
 	void FractalCreator::calculateRangeTotals() {
 
 		int rangeIndex = 0;
@@ -70,7 +88,7 @@ namespace de {
 	void FractalCreator::drawFractal() {
 
 		RGB startColor(0, 0, 0);
-		RGB endColor(0, 0, 255); // Best color 200 green, 255 blue
+		RGB endColor(0, 0, 255); // Best color 200 green, 255 blue. Random can also be used
 		RGB colorDiff = endColor - startColor;
 
 		for (int y = 0; y < m_height; y++) {

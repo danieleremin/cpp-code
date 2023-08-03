@@ -6,6 +6,7 @@
 #include <cstdint>
 #include <math.h>
 #include <vector>
+#include <assert.h>
 #include "Bitmap.h"
 #include "Bitmap.h"
 #include "Mandelbrot.h"
@@ -36,6 +37,8 @@ namespace de {
 		void calculateRangeTotals();
 		void drawFractal();
 		void writeBitmap(string name);
+		int getRange(int iterations) const;
+
 	public:
 		FractalCreator(int width, int height);
 		void addRange(double rangeEnd, const RGB& rgb);
