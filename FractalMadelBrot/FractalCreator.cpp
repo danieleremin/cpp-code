@@ -87,9 +87,9 @@ namespace de {
 	}
 	void FractalCreator::drawFractal() {
 
-		RGB startColor(0, 0, 0);
+		/* RGB startColor(0, 0, 0);
 		RGB endColor(0, 0, 255); // Best color 200 green, 255 blue. Random can also be used
-		RGB colorDiff = endColor - startColor;
+		RGB colorDiff = endColor - startColor; */
 
 		for (int y = 0; y < m_height; y++) {
 			for (int x = 0; x < m_width; x++) {
