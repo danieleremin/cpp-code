@@ -10,6 +10,7 @@ static TCHAR WindowClass[] = _T("DesktopApp");
 
 // The string that appears in the application's title bar.
 static TCHAR szTitle[] = _T("Windows Desktop Hello World");
+static TCHAR szWindowClass[] = _T("win32app");
 
 // Stored instance handle for use in Win32 API calls such as FindResource
 HINSTANCE hInst;
